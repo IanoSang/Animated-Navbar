@@ -40,7 +40,7 @@ header{
     position: absolute;
     top: 0;
     left: 0;
-    font-family: 'Font Awsome 5 Free';
+    font-family: 'Font Awosome 5 Free';
     font-weight: 700;
     font-size: 2em;
 }
@@ -75,4 +75,38 @@ header{
 }
 .nav ol li a:hover::before{
     color: white;
+}
+
+@media (max-width: 1200px){
+    .btn{
+        display: flex;
+        z-index: 100;
+    }
+    header{
+        justify-content: space-between;
+        padding: 0.2em;
+    }
+    .nav{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        background: #F8F8F8;
+        transform:translateY(-110%);
+        transition: all .4s;
+    }
+    input:checked ~.nav{
+        transform: translateY(0%);
+    }
+    input:checked::before{
+        content: '\fOOd';
+    }
+}
+@media (max-width: 700px) {
+    .nav ol{
+        flex-direction: column;
+        text-align: center;
+    }
 }
